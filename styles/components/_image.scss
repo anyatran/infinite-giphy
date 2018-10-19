@@ -1,0 +1,29 @@
+$cubic-transition: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+.image {
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3), 10px 19px 29px 0 rgba(0, 0, 0, 0.3);
+  height: 100%;
+  margin: 40px auto;
+  max-height: 30vw;
+  max-width: 80vw;
+  transform: translateZ(0) scale(1);
+  transition: transform 1000ms $cubic-transition, opacity 600ms $cubic-transition, visibility 600ms $cubic-transition;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  visibility: visible;
+
+  &.is-hidden {
+    transform: translateZ(0) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 20px auto;
+    max-height: 50vw;
+    max-width: 90vw;
+  }
+}

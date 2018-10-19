@@ -1,0 +1,25 @@
+.list {
+  padding-bottom: 100px;
+  position: relative;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__message {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 100px;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}
